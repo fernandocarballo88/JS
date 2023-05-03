@@ -1,43 +1,3 @@
-/*
-let nombre = prompt("ingrese su nombre(para salir esc)")
-if (nombre != "esc"){
-    let apellido = prompt("ingrese su apellido")
-    console.log("Nombre: " + nombre + " Apellido: " + apellido)
-}
-
-while(nombre != "esc"){
-
-    nombre = prompt("ingrese su nombre(para salir esc)")
-    if (nombre != "esc"){
-        apellido = prompt("ingrese su apellido")
-        console.log("Nombre: " + nombre + " Apellido: " + apellido)}
-
-}
-*/
-
-// arrays
-
-/*let naves = ["x-wing", "imperial shuttle", " naboo starfighter", "razor crest", "tie fighter", "millenium falcon", "imperial cruiser"];
- console.log(naves[1])//posicion del array
- console.log(naves.length)// cuenta los array
- */
-
-/*let nave = prompt("ingrese el nombre del set(para salir esc)")
-
-do{
-    if(nave !="esc"){
-        let precio = parseFloat(prompt("ingrese valor en dolares"))
-        let envio = 2000
-
-        console.log("Nombre del Set: " + nave + " Precio en dolares: " + precio + " En Pesos mas envio: " + (precio*400+envio))}
-
-        nave = prompt("ingrese el nombre del set(para salir esc)")
-    }while(nave !="esc")*/
-
-
-
-
-
     let aviso = parseInt(prompt("Ingrese el Numero de Set:   1_X-Wing     2_Imperial Shuttle      3_Naboo Starfighter    4_Razor Crest     5_Tie Fighter     6_Millenium Falcon     7_Imperial Cruiser   INGRESE 0 PARA CANCELAR"));
     const naves = ["No Ingresó un número valido", "X-wing", "Imperial Shuttle", " Naboo Starfighter", "Razor Crest", "Tie Fighter", "Millenium Falcon", "Imperial Cruiser"];
 
@@ -48,7 +8,7 @@ while(aviso !=0){
 
             let cantidad =parseInt(prompt("Ingrese cantidad de Sets"));
             const envio = 2000;
-            
+
             function calculo(x){
                 const resultado = (x*400)*cantidad+envio
                 return resultado
