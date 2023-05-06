@@ -1,4 +1,4 @@
-    let aviso = parseInt(prompt("Ingrese el Numero de Set:   1_X-Wing     2_Imperial Shuttle      3_Naboo Starfighter    4_Razor Crest     5_Tie Fighter     6_Millenium Falcon     7_Imperial Cruiser   INGRESE 0 PARA CANCELAR"));
+    let aviso = parseInt(prompt("Ingrese el Numero de Set:\n1_X-Wing\n2_Imperial Shuttle\n3_Naboo Starfighter\n4_Razor Crest\n5_Tie Fighter\n6_Millenium Falcon\n7_Imperial Cruiser\nINGRESE 0 PARA CANCELAR"));
     const naves = ["No Ingresó un número valido", "X-wing", "Imperial Shuttle", " Naboo Starfighter", "Razor Crest", "Tie Fighter", "Millenium Falcon", "Imperial Cruiser"];
 
 
@@ -41,6 +41,6 @@ while(aviso !=0){
         alert(naves[0])
     };
 
-    aviso = parseInt(prompt("Ingrese el Numero de Set:   1_X-Wing     2_Imperial Shuttle      3_Naboo Starfighter    4_Razor Crest     5_Tie Fighter     6_Millenium Falcon     7_Imperial Cruiser   INGRESE 0 PARA CANCELAR"));
+    aviso = parseInt(prompt("Ingrese el Numero de Set:\n1_X-Wing\n2_Imperial Shuttle\n3_Naboo Starfighter\n4_Razor Crest\n5_Tie Fighter\n6_Millenium Falcon\n7_Imperial Cruiser\nINGRESE 0 PARA CANCELAR"));
 }
 
