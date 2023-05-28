@@ -1,31 +1,31 @@
 const productos = [
     {
-        nombre:"xwing",
+        nombre:"X wing",
         precio:50,
         stock:4,
     },
     {
-        nombre:"imperialshuttle",
+        nombre:"Imperial Shuttle",
         precio:60,
         stock:3,
     },
     {
-        nombre:"naboo",
+        nombre:"Naboo Starfighter",
         precio:80,
         stock:1,
     },
     {
-        nombre:"razorcrest",
+        nombre:"Razor Crest",
         precio:100,
         stock:2,
     },
     {
-        nombre:"tiefighter",
+        nombre:"Tie Fighter",
         precio:30,
         stock:10,
     },
     {
-        nombre:"imperialcruisser",
+        nombre:"Imperial Cruisser",
         precio:200,
         stock:1,
     },
