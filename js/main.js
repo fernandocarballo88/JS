@@ -1,4 +1,13 @@
-const productos = [
+const btnClick = document.querySelector("#btnClick")
+btnClick.onclick = () =>{
+    console.log("click")}
+
+localStorage.setItem("titulo","Contactate con Nosotros")
+const titulo = localStorage.getItem("titulo")
+const contenedorContacto = document.querySelector("#contenedorContacto")
+contenedorContacto.innerText = titulo
+
+/*const productos = [
     {
         nombre:"X wing",
         precio:50,
@@ -37,17 +46,13 @@ productos.forEach((producto)=>{
     tarjetaProducto.className = "tarjetaProducto"
     tarjetaProducto.innerHTML = `<img src="../assets/lego.jpg">
                                 <h3>${producto.nombre}</h3>
-                                <span>Prcio: ${producto.precio} $</span>
-                                <span>Stock: ${producto.stock} </span>
+                                <span>Prcio: ${producto.precio}$</span>
+                                <span>Stock: ${producto.stock}</span>
                                 <button>COMPRAR</button>
-                                `
-    contenedorProductos.append(tarjetaProducto)
+`
+contenedorProductos.append(tarjetaProducto)
 })
-
-
-
-
-
+*/
 
 /*class Producto{
     constructor(nombre,precio,numero,cantidadPiezas){
