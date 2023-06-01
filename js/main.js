@@ -12,6 +12,7 @@ localStorage.setItem("info",JSON.stringify(info))
 infoPromos.innerText = info.informacion
 
 
+
 /*const productos = [
     {
         nombre:"X wing",

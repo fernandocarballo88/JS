@@ -121,6 +121,32 @@ body {
   font-size: 30px;
 }
 
+.formulario{
+  margin-bottom: 100px;
+}
+
+.footer{
+  background-color:rgba(85, 84, 84, 0.404);
+  list-style: none;
+  margin: 0px;
+  display: flex;
+  text-align: center;
+}
+
+.linkNav2{
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin: 10px;
+
+}
+
+.navegacion ul li{
+  line-height: 40px;
+  list-style: none;
+  text-decoration: none;
+}
 
 
 /* RESPONSIVE CSS
