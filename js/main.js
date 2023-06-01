@@ -2,10 +2,15 @@ const btnClick = document.querySelector("#btnClick")
 btnClick.onclick = () =>{
     console.log("click")}
 
-localStorage.setItem("titulo","Contactate con Nosotros")
-const titulo = localStorage.getItem("titulo")
+localStorage.setItem("saludo","Contactate con Nosotros")
+const saludo = localStorage.getItem("saludo")
 const contenedorContacto = document.querySelector("#contenedorContacto")
-contenedorContacto.innerText = titulo
+contenedorContacto.innerText = saludo
+
+const info = {informacion:"Para informacion y promociones"}
+localStorage.setItem("info",JSON.stringify(info))
+infoPromos.innerText = info.informacion
+
 
 /*const productos = [
     {
