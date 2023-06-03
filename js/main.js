@@ -1,4 +1,4 @@
-let btnClick = document.querySelector("#btnClick")
+const btnClick = document.querySelector("#btnClick")
 btnClick.addEventListener("click",(e)=>{
     e.preventDefault()
     console.log("click")
