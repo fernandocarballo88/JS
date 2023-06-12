@@ -43,7 +43,31 @@ const productos = [
     },
 ]
 
-let contenedorProductos = document.querySelector("#contenedorProductos")
+const verProducto = ({nombre,img,precio,stock}) =>{
+    const contenedorProductos = document.querySelector("#contenedorProductos")
+    const tarjetaProducto = document.createElement("div")
+    tarjetaProducto.className = "tarjetaProducto"
+    tarjetaProducto.innerHTML = `
+                                <h3>${nombre}</h3>
+                                <img src="${img}">
+                                <span>Prcio: ${precio}$</span>
+                                <span>Stock: ${stock}</span>
+                                <button>AGREGAR</button>
+`
+contenedorProductos.append(tarjetaProducto)
+
+}
+
+const verProductos = () =>{
+    productos.forEach(producto =>{
+        verProducto(producto)
+    })
+}
+
+verProductos()
+
+/*
+const contenedorProductos = document.querySelector("#contenedorProductos")
 productos.forEach((producto)=>{
     const tarjetaProducto = document.createElement("div")
     tarjetaProducto.className = "tarjetaProducto"
@@ -58,3 +82,4 @@ productos.forEach((producto)=>{
 `
 contenedorProductos.append(tarjetaProducto)
 })
+*/
