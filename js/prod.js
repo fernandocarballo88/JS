@@ -3,13 +3,15 @@ const productos = [
         id: 1,
         nombre:"X wing",
         img: src="../assets/img/xwing.jpg",
+        piezas: 500,
         precio:50,
-        stock:4,
+                stock:4,
     },
     {
         id: 2,
         nombre:"Imperial Shuttle",
         img: src="../assets/img/imperial shuttle.jpeg",
+        piezas: 1000,
         precio:60,
         stock:3,
     },
@@ -17,6 +19,7 @@ const productos = [
         id: 3,
         nombre:"Naboo Starfighter",
         img: src="../assets/img/naboo n1.jpg",
+        piezas: 1200,
         precio:80,
         stock:1,
     },
@@ -24,6 +27,7 @@ const productos = [
         id: 4,
         nombre:"Razor Crest",
         img: src="../assets/img/razor crest.jpg",
+        piezas: 1800,
         precio:100,
         stock:2,
     },
@@ -31,6 +35,7 @@ const productos = [
         id: 5,
         nombre:"Tie Fighter",
         img: src="../assets/img/tie fighter.jpg",
+        piezas: 300,
         precio:30,
         stock:10,
     },
@@ -38,19 +43,21 @@ const productos = [
         id: 6,
         nombre:"Imperial Cruisser",
         img: src="../assets/img/imperial cruiser.jpg",
+        piezas: 2000,
         precio:200,
-        stock:1,
+        stock:0,
     },
 ]
 
-const verProducto = ({nombre,img,precio,stock}) =>{
+const verProducto = ({nombre,img,piezas,precio,stock}) =>{
     const contenedorProductos = document.querySelector("#contenedorProductos")
     const tarjetaProducto = document.createElement("div")
     tarjetaProducto.className = "tarjetaProducto"
     tarjetaProducto.innerHTML = `
                                 <h3>${nombre}</h3>
                                 <img src="${img}">
-                                <span>Prcio: ${precio}$</span>
+                                <span>Cantidad de Piezas: ${piezas}</span>
+                                <span>Precio: ${precio} USD</span>
                                 <span>Stock: ${stock}</span>
                                 <button>AGREGAR</button>
 `
