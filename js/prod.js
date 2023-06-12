@@ -94,7 +94,17 @@ const verProductos = () =>{
 
 verProductos()
 
-/*
+
+
+/*productos.forEach((producto)=>{
+    const agregarChanguito = document.querySelector("#formulario")
+    agregarChanguito.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        
+    })
+})
+
+
 const contenedorProductos = document.querySelector("#contenedorProductos")
 productos.forEach((producto)=>{
     const tarjetaProducto = document.createElement("div")
