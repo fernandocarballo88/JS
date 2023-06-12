@@ -45,29 +45,50 @@ const productos = [
         img: src="../assets/img/imperial cruiser.jpg",
         piezas: 2000,
         precio:200,
-        stock:0,
+        stock:1,
     },
 ]
 
-const verProducto = ({nombre,img,piezas,precio,stock}) =>{
+const carrito = JSON.parse(localStorage.getItem("carrito")) ?? []
+
+const verProducto = ({id,nombre,img,piezas,precio,stock}) =>{
     const contenedorProductos = document.querySelector("#contenedorProductos")
     const tarjetaProducto = document.createElement("div")
     tarjetaProducto.className = "tarjetaProducto"
     tarjetaProducto.innerHTML = `
+                                <div class="tarjetaProducto">
                                 <h3>${nombre}</h3>
                                 <img src="${img}">
                                 <span>Cantidad de Piezas: ${piezas}</span>
                                 <span>Precio: ${precio} USD</span>
-                                <span>Stock: ${stock}</span>
-                                <button>AGREGAR</button>
+                                </div>
+                                <form id="formularioAgregar${id}">
+                                <input name="id" type="hidden" value="${id}">
+                                <input name="cantidad" type="number" value="1" max="${stock}">
+                                <button type="submit">AGREGAR</button>
+                                </form>
 `
 contenedorProductos.append(tarjetaProducto)
+}
 
+const agregarCarrito =(id) =>{
+    const formularioAgregar = document.querySelector("#formularioAgregar" + id)
+    formularioAgregar.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        const cantidad = e.target.children["cantidad"].value
+        carrito.push({
+            id,
+            cantidad,
+        })
+        localStorage.setItem("carrito",JSON.stringify(carrito))
+    })
 }
 
 const verProductos = () =>{
     productos.forEach(producto =>{
+        if(producto.stock !=0){
         verProducto(producto)
+        agregarCarrito(producto.id)}
     })
 }
 
