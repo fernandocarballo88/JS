@@ -105,6 +105,13 @@ const agregarCarrito =(id) =>{
             cantidad,
         })
         localStorage.setItem("carrito",JSON.stringify(carrito))
+        Swal.fire({
+            position: 'top',
+            icon: 'success',
+            title: 'Producto Agregado al Carrito',
+            showConfirmButton: false,
+            timer: 1500
+          })
     })
 }
 

@@ -2,6 +2,8 @@ const btnClick = document.querySelector("#btnClick")
 btnClick.addEventListener("click",(e)=>{
     e.preventDefault()
     console.log("click")
+    Swal.fire('Formulario Enviado')
+
 })
 
 localStorage.setItem("saludo","Contactate con Nosotros")
