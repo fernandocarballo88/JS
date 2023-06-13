@@ -47,6 +47,30 @@ const productos = [
         precio:200,
         stock:1,
     },
+    {
+        id: 7,
+        nombre:"AT AT",
+        img: src="../assets/img/atat.jpg",
+        piezas: 3000,
+        precio:1000,
+        stock:1,
+    },
+    {
+        id: 8,
+        nombre:"AT TE",
+        img: src="../assets/img/atte.jpg",
+        piezas: 1300,
+        precio:175,
+        stock:2,
+    },
+    {
+        id: 9,
+        nombre:"Milenium Falcon",
+        img: src="../assets/img/milleniumfalcon.jpg",
+        piezas: 2500,
+        precio:12000,
+        stock:1,
+    },
 ]
 
 const carrito = JSON.parse(localStorage.getItem("carrito")) ?? []
