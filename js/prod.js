@@ -1,11 +1,11 @@
-const productos = [
+/*const productos = [
     {
         id: 1,
         nombre:"X wing",
         img: src="../assets/img/xwing.jpg",
         piezas: 500,
         precio:50,
-                stock:4,
+        stock:4,
     },
     {
         id: 2,
@@ -71,7 +71,7 @@ const productos = [
         precio:12000,
         stock:1,
     },
-]
+]*/
 
 const carrito = JSON.parse(localStorage.getItem("carrito")) ?? []
 
@@ -111,11 +111,23 @@ const agregarCarrito =(id) =>{
             title: 'Producto Agregado al Carrito',
             showConfirmButton: false,
             timer: 1500
-          })
+        })
     })
 }
 
-const verProductos = () =>{
+const verProductos = async () =>{
+    const res =  await fetch("../js/productos.json")
+    const productos = await res.json()
+    console.log(productos)
+    productos.forEach(producto =>{
+        if(producto.stock !=0){
+        verProducto(producto)
+        agregarCarrito(producto.id)}
+    })
+}
+verProductos()
+
+/*const verProductos = () =>{
     productos.forEach(producto =>{
         if(producto.stock !=0){
         verProducto(producto)
@@ -127,7 +139,7 @@ verProductos()
 
 
 
-/*productos.forEach((producto)=>{
+productos.forEach((producto)=>{
     const agregarChanguito = document.querySelector("#formulario")
     agregarChanguito.addEventListener("submit",(e)=>{
         e.preventDefault()
