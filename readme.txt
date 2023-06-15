@@ -1,4 +1,3 @@
 Hice una pagina de Legos Star Wars Arg.
-
-
-utilizacion de Json y Eventos en Pagina "Contactos"
+Contiene utilización de JSON, eventos en contactos, librerías al agregar el carrito y enviar formulario.
+Promesas y fetch
